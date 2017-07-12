@@ -22,6 +22,5 @@ function setup() {
 
 //noinspection JSUnusedGlobalSymbols
 function draw() {
-  if (typeof(_draw) === 'undefined') return;
   _draw();
 }
