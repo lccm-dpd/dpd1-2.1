@@ -2,8 +2,8 @@
 
 const _setup = () => {
   const r = 255;
-  const g = 99;
-  const b = 150;
+  const g = 0;
+  const b = 0;
 
   createCanvas(windowWidth,windowHeight);
 
