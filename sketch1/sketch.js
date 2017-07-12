@@ -9,3 +9,7 @@ const _setup = () => {
 
   background(r, g, b);
 };
+
+const _draw = () => {
+  // empty for now
+};

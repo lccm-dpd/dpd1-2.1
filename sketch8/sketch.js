@@ -22,6 +22,10 @@ const _setup = () => {
   updatePixels();
 };
 
+const _draw = () => {
+  // empty for now
+};
+
 
 
 
