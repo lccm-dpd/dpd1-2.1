@@ -20,6 +20,8 @@ function draw() {
 
   background('black');
 
+  trimTrail();
+
   drawTrail();
 
   const fillColour = currentColour();
@@ -32,11 +34,13 @@ function draw() {
 
 // Application functions
 
-function drawTrail() {
+function trimTrail() {
   if (trail.length === TRAIL_SIZE) {
     trail.pop();
   }
+}
 
+function drawTrail() {
   trail.forEach(t => {
     t.diameter = t.diameter * SHRINKAGE;
     circle(t.x, t.y, t.diameter, t.fillColour);
