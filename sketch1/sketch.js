@@ -1,6 +1,6 @@
 'use strict';
 
-const _setup = () => {
+function setup() {
   const r = 255;
   const g = 0;
   const b = 0;
@@ -8,8 +8,4 @@ const _setup = () => {
   createCanvas(windowWidth,windowHeight);
 
   background(r, g, b);
-};
-
-const _draw = () => {
-  // empty for now
-};
+}

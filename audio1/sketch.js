@@ -1,26 +1,26 @@
 'use strict';
 
-let carrier;
+const oscillator = new p5.Oscillator('sine');
+let audible = false;
 
-const _setup = () => {
-  const r = 0;
-  const g = 255;
-  const b = 0;
-
+function setup() {
   createCanvas(windowWidth,windowHeight);
+  
+  background('blue');
 
-  background(r, g, b);
+  oscillator.amp(0);
+  oscillator.freq(440);
+  oscillator.start();
+}
 
-  carrier = new p5.Oscillator('sine');
-  carrier.amp(0);
-  carrier.freq(440);
-  carrier.start();
-};
-
-const _draw = () => {
-  if (mouseIsPressed) {
-    carrier.amp(0.25);
-  } else {
-    carrier.amp(0);
+function draw() {
+  if (!audible && mouseIsPressed) {
+    background('green');
+    oscillator.amp(0.25);
+    audible = true;
+  } else if (audible && !mouseIsPressed) {
+    background('blue');
+    oscillator.amp(0);
+    audible = false;
   }
-};
+}

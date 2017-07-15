@@ -1,6 +1,6 @@
 'use strict';
 
-const _setup = () => {
+function setup() {
 
   createCanvas(windowWidth,windowHeight);
 
@@ -20,11 +20,11 @@ const _setup = () => {
   }
 
   updatePixels();
-};
+}
 
-const _draw = () => {
+function draw() {
   // empty for now
-};
+}
 
 
 

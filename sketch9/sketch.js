@@ -2,7 +2,7 @@
 
 let savedFrameRate = 0;
 
-const debug = () => {
+function debug() {
   const currentFrameRate = frameRate();
   if (Math.abs(currentFrameRate - savedFrameRate) > 2) {
     textSize(32);
@@ -12,13 +12,9 @@ const debug = () => {
     text(`r: ${Math.floor(frameRate())}`, 20, 38);
   }
   savedFrameRate = currentFrameRate;
-};
+}
 
-const _preload = () => {
-
-};
-
-const _setup = () => {
+function setup() {
   const r = 0;
   const g = 0;
   const b = 0;
@@ -26,21 +22,17 @@ const _setup = () => {
   createCanvas(windowWidth,windowHeight);
 
   background(r, g, b);
-};
+}
 
-const _draw = () => {
+function draw() {
 
   debug();
 
   if (mouseIsPressed) {
-    fill(255,0,0);
+    fill('red');
   } else {
-    fill(255, 255, 255);
+    fill('white');
   }
+
   ellipse(mouseX, mouseY, 30, 30);
-};
-
-
-
-
-
+}
